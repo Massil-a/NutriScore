@@ -11,7 +11,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Scan" component={GetInfos} options={{ title: 'Entrez un Code Barre' }} />
-        <Stack.Screen name="InfosCode" component={InfosCode} options={{ title: 'Informations sur votre produit!' }} />
+        <Stack.Screen name="InfosCode" component={InfosCode} options={{ title: 'Informations sur votre produit!l' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
