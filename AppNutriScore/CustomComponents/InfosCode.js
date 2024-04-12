@@ -8,6 +8,7 @@ export default function InfosCode({ route }) {
     <View style={styles.container}>
       <Text style={styles.title}>Informations sur le produit</Text>
       <Text>Marque: {brand.product.brands}</Text>
+      <Image source={{uri: brand.product.image_front_url}}></Image>
     </View>
   );
 }
