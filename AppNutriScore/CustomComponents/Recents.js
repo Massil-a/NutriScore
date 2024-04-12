@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function InfosCode({ route }) {
+export default function Recents({ route }) {
   const { brand } = route.params;
 
   return (

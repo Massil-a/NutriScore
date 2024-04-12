@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
+import InfosCode from './InfosCode';
+
 export default function GetInfos() {
   const [codeBarre, setCodeBarre] = React.useState('');
   const navigation = useNavigation();
@@ -11,10 +13,10 @@ export default function GetInfos() {
     .then(response=>response.json())
     .then(data=>{
         console.log(data.product.brands);
-        navigation.navigate('GetInfos', { brand: data.product.brands });
+        navigation.navigate('InfosCode', { brand: data });
     })
     .catch(e=>{
-        console.log("\nERRRRRRREUR SUR LE FETCH : "+e);
+        console.error("ERRRRRRREUR SUR LE FETCH : "+e);
     });
   }
 
@@ -38,11 +40,12 @@ export default function GetInfos() {
 
 const styles = StyleSheet.create({
   container: {
-    width: '80%',
+    margin:20,
     backgroundColor: '#fff',
-    padding: 20,
+    alignItems: "center",
     borderRadius: 10,
-    alignItems: 'center',
+    padding: 20,
+    justifyContent: 'center',
   },
   title: {
     fontSize: 20,
