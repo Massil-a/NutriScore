@@ -9,7 +9,7 @@ export default function GetInfos() {
   const navigation = useNavigation();
 
   function sendBarCode() {
-    fetch("s"+codeBarre+".json")
+    fetch("https://world.openfoodfacts.org/api/v2/product/"+codeBarre+".json")
     .then(response=>response.json())
     .then(data=>{
         console.log(data.product.brands);
